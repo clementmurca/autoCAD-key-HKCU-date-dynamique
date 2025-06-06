@@ -1,6 +1,5 @@
 # AutoCAD registry key management
-$regPath = 'HKCU:\Software'
-#'HKCU:\Software\Autodesk\AutoCAD LT\R30\ACADLT-7101:409\FixedProfile\General'
+$regPath = 'HKCU:\Software\Autodesk\AutoCAD LT\R30\ACADLT-7101:409\FixedProfile\General'
 
 $name = 'CBER_DATE'
 $currentDate = Get-Date
