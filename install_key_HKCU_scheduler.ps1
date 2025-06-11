@@ -14,14 +14,6 @@ if (-not (Test-Path $ScriptPath)) {
     exit 1
 }
 
-# Check administrator privileges
-if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    Write-Host "ERROR: This script must be run as administrator!" -ForegroundColor Red
-    Write-Host "Right-click on PowerShell > Run as administrator" -ForegroundColor Yellow
-    pause
-    exit 1
-}
-
 try {
     # === TASK 1: At session logon ===
     Write-Host "`n1. Creating task 'AutoCAD Registry - Session Active'..." -ForegroundColor Green
